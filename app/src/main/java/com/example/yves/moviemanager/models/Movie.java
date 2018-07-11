@@ -1,6 +1,8 @@
 package com.example.yves.moviemanager.models;
 
-public class Movie {
+import java.io.Serializable;
+
+public class Movie implements Serializable {
 
     String id;
     String title;
@@ -70,7 +72,7 @@ public class Movie {
     }
 
     public String getBackdropPath() {
-        return backdropPath;
+        return String.format("https://image.tmdb.org/t/p/w780%s", backdropPath);
     }
 
     public void setBackdropPath(String backdropPath) {
